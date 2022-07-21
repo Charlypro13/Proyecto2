@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Proyecto2</title>
+</head>
+<body>
+<style>
+h1{text-align: center;}
+section{text-align: center;}
+
+/**diseño de forma a los botones**/
+
+#btnclick{
+border:groove;
+border-radius:5px;
+cursor: pointer;
+}
+
+#btnreset{
+border:groove;
+border-radius:5px;
+cursor: pointer;
+}
+
+#btnreducir{
+border:groove;
+border-radius:5px;
+cursor: pointer;
+}
+
+#contarclick{
+font-size: 44px;
+font-weight: 44;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
+}
+
+/**Asignación de variables de los botones y logica de la función**/
+
+</style>  
+
+<div>
+<h1 style="color:mediumblue ;"> Contador de clicks</h1>
+</div>
+<section> 
+ <button id="btnreducir">Reducir</button>   
+ <button id="btnreset">Reiniciar</button>
+ <button id="btnclick">Incrementar</button>
+ <p id="contarclick"></p>
+</section>
+
+
+
+<script type="text/javascript">
+var btnelm=document.getElementById('btnclick')
+var btnclear=document.getElementById('btnreset')
+var btnreducir=document.getElementById('btnreducir')
+var pelm=document.getElementById('contarclick')
+var contar=0;
+
+pelm.textContent=0; 
+
+btnelm.onclick=function(){
+    contar++;
+    pelm.textContent=contar;
+    if(contar>0)
+    document.getElementById("contarclick").style.color="green";}
+  
+
+btnclear.onclick=function(){
+
+    contar=0;
+    pelm.textContent=0;
+    if(contar===0)
+    document.getElementById("contarclick").style.color="black";
+
+}
+        
+    
+btnreducir.onclick=function(){
+    contar--;
+    pelm.textContent=contar;
+    if(contar<0)
+    document.getElementById("contarclick").style.color="red";
+}
+
+
+
+
+
+
+</script>
+</body>
+
+</html>
